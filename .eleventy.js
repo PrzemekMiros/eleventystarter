@@ -42,7 +42,7 @@ module.exports = function(eleventyConfig) {
           }
       
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/assets/img/',
             outputDir: './public/assets/img/',
@@ -84,7 +84,7 @@ module.exports = function(eleventyConfig) {
           }
       
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/content/blog/img/',
             outputDir: './public/content/blog/img/',
@@ -125,7 +125,7 @@ module.exports = function(eleventyConfig) {
           }
       
           let stats = await Image(src, {
-            widths: [25, 320, 640, 960, 1200, 1800, 2400],
+            widths: [25, 320, 640, 960, 1200, 1800 ],
             formats: ['jpeg', 'webp'],
             urlPath: '/content/realizacje/img/',
             outputDir: './public/content/realizacje/img/',

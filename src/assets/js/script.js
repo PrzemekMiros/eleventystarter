@@ -22,23 +22,20 @@ if (theme === "light") {
 };
 
 // Lazy blur images
-const blurImgWrap = document.querySelectorAll(".blur-load");
-
-blurImgWrap.forEach(item => {
+if (document.querySelector(".blur-load")) {
+  const blurImgWrap = document.querySelectorAll(".blur-load");
+  blurImgWrap.forEach(item => {
    const img = item.querySelector("picture img");
-
    function loaded() {
       item.classList.add("loaded");
    }  
-
    if (img.complete) {
       loaded();
    } else {
       img.addEventListener("load", loaded);
    }
-   
 });
-
+};
 
 if (document.querySelector('.swiper')) {
   var swiper = new Swiper(".swiper", {
