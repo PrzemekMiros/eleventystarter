@@ -61,10 +61,11 @@ module.exports = function(eleventyConfig) {
             }),
             {},
           );
-      
+       
           const source = `<source type="image/webp" srcset="${srcset['webp']}" >`;
       
           const img = `<img
+            decoding="async"
             loading="lazy"
             alt="${alt}"
             src="${lowestSrc.url}"
@@ -72,8 +73,8 @@ module.exports = function(eleventyConfig) {
             srcset="${srcset['jpeg']}"
             width="${largestSrc.width}"
             height="${largestSrc.height}">`;
-
-          return `<div class="blur-load" style="background-image: url('${lowestSrc.url}')" ><picture> ${source} ${img} </picture></div>`;
+ 
+          return `<div class="blur-load" > <img class="placeholder" src="${lowestSrc.url}" alt="Placeholder" width="${largestSrc.width}" height="${largestSrc.height}"><picture> ${source} ${img} </picture></div>`;
         });
   
   

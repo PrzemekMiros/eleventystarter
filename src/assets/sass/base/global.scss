@@ -26,17 +26,30 @@ video {
 
 .blur-load {
   position: relative;
-  background-size: cover;
-  background-position: center;
 }
 
-.blur-load img {
-  transition: .75s ease-in-out;
+.blur-load .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  transition: all 1s ease-in-out;
+  z-index: 1
+}
+
+.blur-load.loaded .placeholder {
   opacity: 0
 }
 
-.blur-load.loaded img {
-  opacity: 1;
+.blur-load picture img {
+  transition: opacity 1s ease-in-out;
+  opacity: 0
+}
+
+.blur-load.loaded picture img {
+  opacity: 1
 }
 
 .blend-mode {

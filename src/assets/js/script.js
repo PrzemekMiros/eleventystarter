@@ -25,11 +25,11 @@ if (theme === "light") {
 const blurImgWrap = document.querySelectorAll(".blur-load");
 
 blurImgWrap.forEach(item => {
-   const img = item.querySelector("img");
+   const img = item.querySelector("picture img");
 
    function loaded() {
       item.classList.add("loaded");
-   }
+   } 
 
    if (img.complete) {
       loaded();
@@ -38,7 +38,6 @@ blurImgWrap.forEach(item => {
    }
    
 });
-
 
 
 if (document.querySelector('.swiper')) {
