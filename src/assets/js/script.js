@@ -29,7 +29,7 @@ blurImgWrap.forEach(item => {
 
    function loaded() {
       item.classList.add("loaded");
-   } 
+   }  
 
    if (img.complete) {
       loaded();
